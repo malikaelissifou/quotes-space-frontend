@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Heart, Share2, Repeat2, MoreHorizontal, 
-  Copy, Flag, Bookmark, Download, User, ZoomIn 
+import {
+  Heart, Share2, Repeat2, MoreHorizontal,
+  Copy, Flag, Bookmark, Download, User, ZoomIn
 } from "lucide-react";
 
 interface QuoteCardProps {
@@ -38,7 +38,7 @@ const QuoteCard: React.FC<QuoteCardProps> = ({
   const [menuPosition, setMenuPosition] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
 
   const [isLongPressing, setIsLongPressing] = useState(false);
-  const longPressTimer = useRef<NodeJS.Timeout | null>(null);
+  const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [isZoomed, setIsZoomed] = useState(false);
 
