@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Empêcher tout débordement horizontal */
+  * {
+    box-sizing: border-box;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #6C5DD3 0%, #9B59D4 50%, #F0B6D8 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  /* S'assurer que les éléments fixed ne créent pas de scroll */
+  .no-scroll-effect {
+    position: fixed;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  border: 2px solid rgba(255, 255, 255, 0.6); /* cercle autour */
+  background: rgba(255, 255, 255, 0.1); /* léger fond transparent */
+}
