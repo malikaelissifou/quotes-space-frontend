@@ -1,4 +1,4 @@
-import React from "react";
+////import React front "react";
 import { Rocket } from "lucide-react";
 
 const Hero: React.FC = () => {

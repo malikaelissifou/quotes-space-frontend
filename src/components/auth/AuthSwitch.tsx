@@ -1,4 +1,4 @@
-import React from "react";
+////import React front "react";
 
 interface AuthSwitchProps {
   mode: "login" | "register";

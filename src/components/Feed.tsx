@@ -1,4 +1,4 @@
-import React from "react";
+////import React front "react";
 import QuoteCard from "./QuoteCard";
 import { useFocus } from "./FocusContext";
 

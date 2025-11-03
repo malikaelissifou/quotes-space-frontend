@@ -1,4 +1,4 @@
-import React from "react";
+////import React front "react";
 import AuthForm from "./AuthForm";
 
 export default function AuthPage() {

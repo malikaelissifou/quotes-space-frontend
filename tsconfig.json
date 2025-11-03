@@ -10,15 +10,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "verbatimModuleSyntax": false,
-    "types": ["node"]
+    "noEmit": true
   },
-  "include": ["src"],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "include": ["src"]
 }
